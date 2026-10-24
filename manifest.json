@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Passimoritz/hostwerk-public/main/sdk/manifest.schema.json",
+  "id": "modes",
+  "name": {
+    "de": "Modi",
+    "en": "Modes"
+  },
+  "description": {
+    "de": "Dienste für eine Aufgabe mit einem Klick: „Arbeit“ mit Webserver und Datenbank, „Minecraft-Abend“ nur mit dem Server. Wechseln startet genau diese Dienste und stoppt die anderen – auch beim Start von Hostwerk. Auf Wunsch mit eigener Farbe und Seitenleiste.",
+    "en": "Services for one job with one click: “Work” with web server and database, “Minecraft night” with just the server. Switching starts exactly these services and stops the others – also when Hostwerk starts. Optionally with its own colour and sidebar."
+  },
+  "version": "1.0.0",
+  "author": "Hostwerk",
+  "homepage": "https://github.com/Passimoritz/hostwerk-ext-modes",
+  "license": "MIT",
+  "icon": "icon.svg",
+  "color": "#7c5cff",
+  "category": "productivity",
+  "hostwerk": ">=3.0.0",
+  "permissions": [
+    "native"
+  ],
+  "page": {
+    "title": {
+      "de": "Modi",
+      "en": "Modes"
+    },
+    "description": {
+      "de": "Dienste für eine Aufgabe mit einem Klick.",
+      "en": "Services for one job with one click."
+    },
+    "icon": "grid",
+    "nav": false
+  },
+  "backend": "server/index.js",
+  "ui": "ui/index.js"
+}
