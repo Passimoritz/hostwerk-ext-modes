@@ -33,5 +33,10 @@
     "nav": false
   },
   "backend": "server/index.js",
-  "ui": "ui/index.js"
+  "ui": "ui/index.js",
+  "banner": "banner.svg",
+  "screenshots": [
+    "docs/screenshot.png",
+    "docs/screenshot.de.png"
+  ]
 }
