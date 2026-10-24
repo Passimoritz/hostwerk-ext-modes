@@ -1,3 +1,7 @@
+## 1.0.1
+
+- New animated icon and banner in the common Hostwerk style (isometric block). / Neues animiertes Symbol und Banner im gemeinsamen Hostwerk-Stil (isometrischer Block).
+
 ## 1.0.0
 
 - Modes as their own extension (Hostwerk 3.0+): before, they were built into Settings → Modes. Existing modes stay exactly as they were – nothing to set up again. / Modi als eigene Erweiterung (Hostwerk 3.0+): vorher eingebaut unter Einstellungen → Modi. Bestehende Modi bleiben genau so erhalten.
