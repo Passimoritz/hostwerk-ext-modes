@@ -1,6 +1,8 @@
-![Modes](banner.svg)
+![One click](banner.svg)
 
-# Modes
+# One click
+
+> **Since 2.0 “One click”:** this also contains the former “Quick tasks”. Under Tasks → One click you find your modes and your tasks as big buttons (with search, Hostwerk asks before every run). Mark favourite tasks with Hostwerk’s star – they come first, appear in the “New” menu and on the tile “Quick start”. Anyone who had the quick tasks gets this version automatically; the pinned ones become favourites.
 
 Services for one job with one click: “Work” with web server and database, “Minecraft night” with just the server. Switching starts exactly these services and stops the others – also when Hostwerk starts.
 

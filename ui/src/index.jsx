@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { Layers, LayoutGrid, Plus, Trash2, Pencil, Check, Play, ChevronDown, ChevronUp, Settings2, Globe, Server, Mail, Boxes, Box, Bot, Square, MousePointerClick, Power, Sparkles } from 'lucide-react';
+import { Layers, LayoutGrid, Plus, Trash2, Pencil, Check, Play, ChevronDown, ChevronUp, Settings2, Globe, Server, Mail, Boxes, Box, Bot, Square, MousePointerClick, Power, Sparkles, Zap } from 'lucide-react';
 import { post, put, del, useApi } from '@hostwerk/api';
 import { Btn, Modal, Field, Empty, Loading, toast, confirmDialog, promptDialog } from '@hostwerk/ui';
 import { t } from '@hostwerk/i18n';
+import { QuickTasks, QuickTile } from './quick';
 import './style.css';
 
 /*
@@ -228,12 +229,25 @@ function ModeEditor({ p, services, onClose, onSaved }) {
   );
 }
 
-/** Own page (Extensions → Open) – the same management as the tab on the Tasks page. */
-function ModesPage() {
+/** 2.0 „Ein-Klick“: Modi und Aufgaben (bis 1.5 eigene Erweiterung „Schnell-Aufgaben“) unter einem Dach. */
+function OneClick({ action = null }) {
+  return (
+    <div className="stack oc-stack">
+      <ModesManager />
+      <QuickTasks action={action} />
+    </div>
+  );
+}
+
+/** Aktion aus der Adresse (#/ext/modes?action=run oder t-<aufgabe>&at=…) – Schnellsuche, Menü „Neu“, Tastenkürzel. */
+const actionOf = (query) => { const q = new URLSearchParams(String(query || '').replace(/^\?/, '')); return q.get('action') ? { id: q.get('action'), at: q.get('at') || '' } : null; };
+
+/** Own page (Extensions → Open) – the same as the tab on the Tasks page. */
+function ModesPage({ query = '' }) {
   return (
     <div className="page fade-in">
-      <div className="page-head"><div><h1><LayoutGrid size={22} /> Modes</h1><p>Services for one job with one click.</p></div></div>
-      <ModesManager />
+      <div className="page-head"><div><h1><LayoutGrid size={22} /> One click</h1><p>Services for one job and your tasks – each with one click.</p></div></div>
+      <OneClick action={actionOf(query)} />
     </div>
   );
 }
@@ -243,7 +257,9 @@ function HeroSwitch() { return <ModeSwitch variant="hero" />; }
 export default {
   pages: { main: ModesPage },
   slots: {
-    'tasks.tabs': [{ id: 'modi', title: 'Modes', icon: Layers, Component: ModesManager, order: 20 }],
+    // 2.0: der Reiter behält seine Adresse (#/aufgaben/x-modes-modi) und zeigt Modi und Aufgaben
+    'tasks.tabs': [{ id: 'modi', title: 'One click', icon: Layers, Component: OneClick, order: 20 }],
+    'dashboard.tiles': [{ id: 'tasks', title: 'Quick start', icon: Zap, size: 'third', Component: QuickTile }],
     'dashboard.actions': [{ id: 'switch', Component: HeroSwitch }],
     'sidebar.footer': [{ id: 'switch', Component: ModeSwitch }],
   },

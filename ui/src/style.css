@@ -47,3 +47,15 @@
 .modes-color { gap: 12px; flex-wrap: wrap; }
 .modes-color-input { width: 36px; height: 28px; padding: 0; border: 0; background: none; }
 .modes-areas { margin-top: 6px; }
+
+/* ---------- 2.0: Ein-Klick – Teil „Aufgaben“ (bis 1.5 Erweiterung „Schnell-Aufgaben“) ---------- */
+.oc-stack { gap: var(--sp-4); }
+.oc-sub { margin: 0; }
+.oc-search { max-width: 420px; }
+.oc-tasks { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--sp-3); }
+.oc-task { display: flex; flex-direction: column; gap: var(--sp-2); }
+.oc-task[data-state="error"] { border-color: var(--err); }
+.oc-task[data-state="running"] { border-color: var(--warn); }
+.oc-result { display: flex; gap: var(--sp-1); min-width: 0; }
+.oc-tile { display: flex; flex-direction: column; gap: var(--sp-2); }
+.oc-tile-btn { justify-content: flex-start; min-width: 0; }

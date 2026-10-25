@@ -1,6 +1,8 @@
-![Modi](banner.svg)
+![Ein-Klick](banner.svg)
 
-# Modi
+# Ein-Klick
+
+> **Seit 2.0 „Ein-Klick“:** Hier stecken auch die früheren „Schnell-Aufgaben“. Unter Aufgaben → Ein-Klick stehen deine Modi und deine Aufgaben als große Knöpfe (mit Suche, Hostwerk fragt vor jedem Start). Lieblings-Aufgaben markierst du mit Hostwerks Stern – sie stehen oben, im Menü „Neu“ und auf der Kachel „Schnell starten“. Wer die Schnell-Aufgaben hatte, bekommt diese Fassung automatisch; die angehefteten werden zu Favoriten.
 
 Dienste für eine Aufgabe mit einem Klick: „Arbeit“ mit Webserver und Datenbank, „Minecraft-Abend“ nur mit dem Server. Wechseln startet genau diese Dienste und stoppt die anderen – auch beim Start von Hostwerk.
 

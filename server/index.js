@@ -15,10 +15,12 @@ function activate(host) {
   modes = new Modes(host);
   host.provide('profiles', modes);
   modes.routes(host.router);
+  // 2.0: Teil „Aufgaben“ (bis 1.5 eigene Erweiterung „Schnell-Aufgaben“) – Lieblings-Aufgaben im Menü „Neu“
+  require('./quick').mount(host);
 }
 
 function uninstall() { if (modes) modes.release(); }
 
-function deactivate() { modes = null; }
+function deactivate() { modes = null; require('./quick').unmount(); }
 
 module.exports = { activate, deactivate, uninstall, Modes };

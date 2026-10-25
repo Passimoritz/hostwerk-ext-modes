@@ -2,14 +2,14 @@
   "$schema": "https://raw.githubusercontent.com/Passimoritz/hostwerk-public/main/sdk/manifest.schema.json",
   "id": "modes",
   "name": {
-    "de": "Modi",
-    "en": "Modes"
+    "de": "Ein-Klick",
+    "en": "One click"
   },
   "description": {
-    "de": "Dienste für eine Aufgabe mit einem Klick: „Arbeit“ mit Webserver und Datenbank, „Minecraft-Abend“ nur mit dem Server. Wechseln startet genau diese Dienste und stoppt die anderen – auch beim Start von Hostwerk. Auf Wunsch mit eigener Farbe und Seitenleiste.",
-    "en": "Services for one job with one click: “Work” with web server and database, “Minecraft night” with just the server. Switching starts exactly these services and stops the others – also when Hostwerk starts. Optionally with its own colour and sidebar."
+    "de": "Dienste und Aufgaben mit einem Klick: Modi wie „Arbeit“ mit Webserver und Datenbank oder „Minecraft-Abend“ nur mit dem Server – Wechseln startet genau diese Dienste und stoppt die anderen, auch beim Start von Hostwerk, auf Wunsch mit eigener Farbe und Seitenleiste. Dazu deine Aufgaben als große Knöpfe: ein Klick startet eine Sicherung, einen Bericht oder ein Skript (Hostwerk fragt vorher), Lieblinge mit Hostwerks Stern oben und im Menü „Neu“, auch als Kachel.",
+    "en": "Services and tasks with one click: modes like “Work” with web server and database or “Minecraft night” with just the server – switching starts exactly these services and stops the others, also when Hostwerk starts, optionally with an own colour and sidebar. Plus your tasks as big buttons: one click runs a backup, a report or a script (Hostwerk asks first), favourites with Hostwerk’s star on top and in the “New” menu, also as a tile."
   },
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": "Hostwerk",
   "homepage": "https://github.com/Passimoritz/hostwerk-ext-modes",
   "license": "MIT",
@@ -17,17 +17,21 @@
   "color": "#7c5cff",
   "category": "productivity",
   "hostwerk": ">=3.0.0",
+  "sdkVersion": "3.8",
+  "replaces": [
+    "quick-tasks"
+  ],
   "permissions": [
     "native"
   ],
   "page": {
     "title": {
-      "de": "Modi",
-      "en": "Modes"
+      "de": "Ein-Klick",
+      "en": "One click"
     },
     "description": {
-      "de": "Dienste für eine Aufgabe mit einem Klick.",
-      "en": "Services for one job with one click."
+      "de": "Dienste für eine Aufgabe und deine Aufgaben – jeweils mit einem Klick.",
+      "en": "Services for one job and your tasks – each with one click."
     },
     "icon": "grid",
     "nav": false
@@ -42,6 +46,46 @@
   "data": {
     "settings": [
       "profiles"
+    ]
+  },
+  "contributes": {
+    "actions": [
+      {
+        "id": "run",
+        "title": {
+          "de": "Aufgabe starten …",
+          "en": "Run a task …"
+        },
+        "icon": "zap",
+        "on": [
+          "palette"
+        ]
+      }
+    ],
+    "new": [
+      {
+        "id": "run",
+        "title": {
+          "de": "Aufgabe starten",
+          "en": "Run a task"
+        },
+        "description": {
+          "de": "Eine deiner Aufgaben per Suche starten",
+          "en": "Find one of your tasks and run it"
+        },
+        "icon": "zap"
+      }
+    ],
+    "shortcuts": [
+      {
+        "id": "run",
+        "title": {
+          "de": "Aufgabe starten …",
+          "en": "Run a task …"
+        },
+        "keys": "ctrl+alt+q",
+        "action": "run"
+      }
     ]
   }
 }
