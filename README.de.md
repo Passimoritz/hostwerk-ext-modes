@@ -4,7 +4,7 @@
 
 Dienste für eine Aufgabe mit einem Klick: „Arbeit“ mit Webserver und Datenbank, „Minecraft-Abend“ nur mit dem Server. Wechseln startet genau diese Dienste und stoppt die anderen – auch beim Start von Hostwerk.
 
-[English](README.md) · Offizielle [Hostwerk](https://github.com/Passimoritz/hostwerk-public)-Erweiterung (SDK 3.3, native Erweiterung)
+[English](README.md) · Offizielle [Hostwerk](https://github.com/Passimoritz/hostwerk-public)-Erweiterung (native Erweiterung, ab Hostwerk 3.0)
 
 ![Bildschirmfoto](docs/screenshot.de.png)
 

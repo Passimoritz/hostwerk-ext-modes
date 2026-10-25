@@ -4,7 +4,7 @@
 
 Services for one job with one click: “Work” with web server and database, “Minecraft night” with just the server. Switching starts exactly these services and stops the others – also when Hostwerk starts.
 
-[Deutsch](README.de.md) · An official [Hostwerk](https://github.com/Passimoritz/hostwerk-public) extension (SDK 3.3, native extension)
+[Deutsch](README.de.md) · An official [Hostwerk](https://github.com/Passimoritz/hostwerk-public) extension (native extension, Hostwerk 3.0 or newer)
 
 ![Screenshot](docs/screenshot.png)
 
